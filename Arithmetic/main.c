@@ -6,6 +6,7 @@ int SubFunction();
 int IncFunction();
 int DecFunction();
 int MulFunction();
+int IMulFunction();
 
 int main()
 {
@@ -14,4 +15,5 @@ int main()
 	printf("%d\n", IncFunction());
 	printf("%d\n", DecFunction());
 	printf("%d\n", MulFunction());
+	printf("%d\n", IMulFunction());
 }
