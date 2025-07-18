@@ -1,12 +1,15 @@
-NAME        = Add
+NAME        = Arithmetic
 ASM         = nasm
 LD          = ld
 
 ASMFLAGS    = -f elf64
 LDFLAGS     = -o $(NAME)
 
-SRC         = Add.asm
-OBJ         = Add.o
+SRC         =	Add/Add.asm	\
+				Sub/Sub.asm
+
+OBJ         =	Add/Add.o	\
+				Sub/Sub.o
 
 $(NAME): $(OBJ) main.o
 	gcc -no-pie -o $(NAME) main.o $(OBJ)
