@@ -7,11 +7,13 @@ LDFLAGS     = -o $(NAME)
 
 SRC         =	Add/Add.asm	\
 				Sub/Sub.asm	\
-				Inc/Inc.asm
+				Inc/Inc.asm	\
+				Dec/Dec.asm
 
 OBJ         =	Add/Add.o	\
 				Sub/Sub.o	\
-				Inc/Inc.o
+				Inc/Inc.o	\
+				Dec/Dec.o
 
 $(NAME): $(OBJ) main.o
 	gcc -no-pie -o $(NAME) main.o $(OBJ)
