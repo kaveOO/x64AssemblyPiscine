@@ -6,10 +6,12 @@ ASMFLAGS    = -f elf64
 LDFLAGS     = -o $(NAME)
 
 SRC         =	Add/Add.asm	\
-				Sub/Sub.asm
+				Sub/Sub.asm	\
+				Inc/Inc.asm
 
 OBJ         =	Add/Add.o	\
-				Sub/Sub.o
+				Sub/Sub.o	\
+				Inc/Inc.o
 
 $(NAME): $(OBJ) main.o
 	gcc -no-pie -o $(NAME) main.o $(OBJ)
