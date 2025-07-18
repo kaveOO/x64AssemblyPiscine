@@ -5,19 +5,21 @@ LD          = ld
 ASMFLAGS    = -f elf64
 LDFLAGS     = -o $(NAME)
 
-SRC         =	Add/Add.asm	\
-				Sub/Sub.asm	\
-				Inc/Inc.asm	\
-				Dec/Dec.asm	\
+SRC         =	Add/Add.asm		\
+				Sub/Sub.asm		\
+				Inc/Inc.asm		\
+				Dec/Dec.asm		\
 				IMul/IMul.asm	\
-				Mul/Mul.asm
+				Mul/Mul.asm		\
+				Neg/Neg.asm
 
-OBJ         =	Add/Add.o	\
-				Sub/Sub.o	\
-				Inc/Inc.o	\
-				Dec/Dec.o	\
-				IMul/IMul.o	\
-				Mul/Mul.o
+OBJ         =	Add/Add.o		\
+				Sub/Sub.o		\
+				Inc/Inc.o		\
+				Dec/Dec.o		\
+				IMul/IMul.o		\
+				Mul/Mul.o		\
+				Neg/Neg.o
 
 $(NAME): $(OBJ) main.o
 	gcc -no-pie -o $(NAME) main.o $(OBJ)
