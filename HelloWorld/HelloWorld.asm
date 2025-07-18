@@ -1,5 +1,5 @@
 section .data
-    msg db "Hello, World", 0xA		-> 10 -> '\n'
+    msg db "Hello, World", 0xA	; 1010 -> 10 -> '\n'
     len equ $ - msg
 
 section .text
@@ -12,6 +12,6 @@ _start:
 	mov rdx, len
 	syscall
 
-	mov rax, 0x3C	; 0011 1100 	-> 60 sys_exit
+	mov rax, 0x3C				; 0011 1100 	-> 60 sys_exit
 	xor rdi, rdi
 	syscall
