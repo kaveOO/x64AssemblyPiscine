@@ -1,4 +1,4 @@
-NAME        = Arithmetic
+NAME        = While
 ASM         = nasm
 LD          = ld
 
