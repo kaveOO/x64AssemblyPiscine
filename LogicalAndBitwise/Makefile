@@ -5,9 +5,12 @@ LD          = ld
 ASMFLAGS    = -f elf64
 LDFLAGS     = -o $(NAME)
 
-SRC         =	AndOr.asm
+SRC         =	AndOr.asm 	\
+				NotXor.asm
 
-OBJ         =	AndOr.o
+
+OBJ         =	AndOr.o		\
+				NotXor.o
 
 $(NAME): $(OBJ) main.o
 	gcc -no-pie -o $(NAME) main.o $(OBJ)
