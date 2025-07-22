@@ -1,10 +1,13 @@
 #include <stdio.h>
+#include <stdint.h>
 
-long long int Types();
-int Displacement();
+long long int 	Types();
+int 			Displacement();
+int				RetWords();
 
 int main()
 {
 	printf("%lld\n", Types());
 	printf("%d\n", Displacement());
+	printf("%d\n", RetWords());
 }

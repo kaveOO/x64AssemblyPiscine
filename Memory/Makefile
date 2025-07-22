@@ -5,11 +5,13 @@ LD          = ld
 ASMFLAGS    = -f elf64
 LDFLAGS     = -o $(NAME)
 
-SRC         =	Types.asm		\
-				Displacement.asm
+SRC         =	Types.asm			\
+				Displacement.asm	\
+				RetWords.asm
 
-OBJ         =	Types.o			\
-				Displacement.o
+OBJ         =	Types.o				\
+				Displacement.o		\
+				RetWords.o
 
 $(NAME): $(OBJ) main.o
 	gcc -o $(NAME) main.o $(OBJ)
