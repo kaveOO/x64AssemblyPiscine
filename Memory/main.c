@@ -3,11 +3,11 @@
 
 long long int 		Types();
 int 				Displacement();
-unsigned long long	RetWords();
+uint64_t			RetWords();
 
 int main()
 {
 	printf("%lld\n", Types());
 	printf("%d\n", Displacement());
-	printf("%llu\n", RetWords());
+	printf("%ld\n", RetWords());
 }
