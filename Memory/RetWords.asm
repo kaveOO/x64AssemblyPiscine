@@ -9,10 +9,10 @@ section .text
 RetWords:
 	lea rbx, [rel aBytes]
 
-	xor rdi, rdi
+	xor rdi, rdi					; rdi = 0
 	xor rax, rax
 
-	mov ax, [rbx + rdi * 2]			; rdi = 0
+	mov ax, [rbx + rdi * 2]
 	; ax = 0000 0000 0000 1111
 
 	shl rax, 16
@@ -20,9 +20,10 @@ RetWords:
 
 	inc rdi							; rdi = 1
 
-	; mov ax, [rbx + rdi * 2]
-	; ax = 0000 0000 0000 1110
+	mov ax, [rbx + rdi * 2]
+	; ax = 0000 0000 0000 000E
 
-	; shl rax, 16
+	shl rax, 16
+	; rax = 00000000 00000000 00000000 00001111 00000000 00001110 00000000 00000000
 
 	ret
