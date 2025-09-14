@@ -7,11 +7,14 @@ LDFLAGS     = -o $(NAME)
 
 SRC         =	Types.asm			\
 				Displacement.asm	\
-				RetWords.asm
+				RetWords.asm		\
+				Array.asm
 
 OBJ         =	Types.o				\
 				Displacement.o		\
-				RetWords.o
+				RetWords.o			\
+				Array.o
+
 
 $(NAME): $(OBJ) main.o
 	gcc -o $(NAME) main.o $(OBJ)
